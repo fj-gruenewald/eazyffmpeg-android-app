@@ -80,7 +80,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\D3NCE\Dokumente\Code\GitHub\ffmpeg-gui-app\assets\main\mainPic.png" />
+                                                <entry key="imagePath" value="C:\Users\D3NCE\Dokumente\Code\GitHub\ffmpeg-gui-app\assets\appIcon\ic_launcher_round\web_hi_res_512.png" />
+                                                <entry key="scalingPercent" value="73" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -112,7 +113,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_mainCam" />
+                                      <entry key="outputName" value="ic_appicon" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -302,8 +303,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_menu_settings" />
-                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\ffmpeg-gui-app\assets\main\menuitems\settings.svg" />
+                            <entry key="outputName" value="ic_folder" />
+                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\ffmpeg-gui-app\assets\convert\folder.svg" />
                           </map>
                         </option>
                       </PersistentState>

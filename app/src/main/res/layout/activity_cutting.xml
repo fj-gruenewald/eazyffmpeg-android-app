@@ -6,11 +6,233 @@
     android:layout_height="match_parent"
     tools:context=".activity_cutting">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cutting"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="317dp" />
+    <!-- Main Layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Activity Header -->
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view0"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="8dp">
+
+            <!-- Activity Header Layout -->
+                <LinearLayout
+                    android:background="@drawable/menuitem_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_menu_cut"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Video Cutting"
+                        android:textColor="#FFF"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 1 -->
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="4dp">
+
+            <!-- Card 1 Layout -->
+            <LinearLayout
+                android:background="@color/cardbackground"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Card 1 Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <!-- Card 1 Header Icon -->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_input"/>
+
+                    <!-- Card 1 Header Text -->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Input File"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <!-- Card 1 Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="250dp"
+                        android:layout_gravity="center"
+                        android:layout_height="50dp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_folder"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 2 -->
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="4dp">
+
+            <!-- Card 2 Content -->
+            <LinearLayout
+                android:background="@color/cardbackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="From:"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="00:00:00"
+                    android:textColor="@color/blueishgrey"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 3 -->
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view3"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="4dp">
+
+            <!-- Card 3 Content -->
+            <LinearLayout
+                android:background="@color/cardbackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:text="To:"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="00:00:00"
+                    android:textColor="@color/blueishgrey"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 4 -->
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view4"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="4dp">
+
+            <!-- Card 4 Content -->
+            <LinearLayout
+                android:background="@color/cardbackground"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Trim Video"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

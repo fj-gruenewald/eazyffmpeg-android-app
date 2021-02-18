@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Main Image -->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"/>
 
+    <!-- Menu Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="350dp"
@@ -45,6 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <!-- Upper Menu -->
         <LinearLayout
             android:layout_weight="3"
             android:paddingTop="24dp"
@@ -54,7 +57,8 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    
+
+            <!-- Menu Item Video Creation -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="1"
@@ -91,6 +95,8 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Menu Item Video Cutting -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="1"
@@ -127,6 +133,8 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Menu Item Video Convert -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="1"
@@ -157,7 +165,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Video converter"
+                        android:text="Video Convert"
                         android:textColor="#FFF"
                         android:textSize="18sp" />
 
@@ -166,6 +174,7 @@
 
         </LinearLayout>
 
+        <!-- Second Menu Line -->
         <LinearLayout
             android:layout_weight="3"
             android:paddingBottom="24dp"
@@ -175,6 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Menu Item Text and Title -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="1"
@@ -211,6 +221,8 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Menu Item Sound -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="1"
@@ -247,6 +259,8 @@
 
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Menu Item Settings -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="1"

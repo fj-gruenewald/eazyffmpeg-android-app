@@ -21,3 +21,15 @@ https://www.flaticon.com/authors/freepik
 
 Dashboard_Settings
 https://www.flaticon.com/authors/freepik
+
+Convert_Input
+https://www.flaticon.com/authors/pixel-perfect
+
+Convert_Output
+https://www.flaticon.com/authors/pixel-perfect
+
+Convert_Codec
+https://www.flaticon.com/free-icon/programming_3721643
+
+Convert_Folder
+https://www.flaticon.com/authors/smashicons

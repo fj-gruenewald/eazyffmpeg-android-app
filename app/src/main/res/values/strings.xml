@@ -4,4 +4,14 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    //Selected item for the Codec Spinner
+    <string name="selected_item">Selected item:</string>
+
+    //String Array for Convert_Codecs
+    <string-array name="codecs">
+        <item>x264</item>
+        <item>x265</item>
+    </string-array>
+
 </resources>
