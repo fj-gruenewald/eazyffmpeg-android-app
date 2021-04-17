@@ -14,4 +14,10 @@
         <item>x265</item>
     </string-array>
 
+    //String Array for Text Locations
+    <string-array name="text_location">
+        <item>Center Top</item>
+        <item>Center</item>
+        <item>Center Bottom</item>
+    </string-array>
 </resources>

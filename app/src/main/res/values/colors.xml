@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Some Colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,5 +10,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blueishgrey">#4a4e69</color>
+
+    <!-- Colors for the Cards -->
     <color name="cardbackground">#F1F1F1</color>
+
+    <!-- Colors for the Menu Items -->
+    <color name="menuItem_blue">#264653</color>
+    <color name="menuItem_green">#2a9d8f</color>
+    <color name="menuItem_lightGreen">#06d6a0</color>
+    <color name="menuItem_orange">#f4a261</color>
+    <color name="menuItem_red">#e76f51</color>
+    <color name="menuItem_yellow">#e9c46a</color>
+
+    <!-- Pastel Color Palette for the Main Menu -->
+    <color name="palettePastel_creme">#eae3c8</color>
+    <color name="palettePastel_creme_dark">#cfc5a5</color>
+    <color name="palettePastel_brown">#c2b092</color>
+    <color name="palettePastel_lightblue">#a1cae2</color>
 </resources>

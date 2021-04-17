@@ -230,7 +230,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Trim Video"/>
+                    android:text="Trim Video"
+                    android:backgroundTint="@color/menuItem_green"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

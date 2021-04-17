@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blueishgrey">
+    android:background="@color/palettePastel_creme">
 
     <TextView
         android:id="@+id/textView"
@@ -13,9 +13,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
-        android:text="EazyFFMPEG"
-        android:textColor="#FFF"
-        android:textSize="12sp"
+        android:text="EazyFFmpeg: cut, create, convert"
+        android:textColor="#c2b092"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
