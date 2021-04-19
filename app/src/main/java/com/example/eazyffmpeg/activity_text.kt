@@ -6,9 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import com.example.eazyffmpeg.functions.ffmpegAudioOnVideo
-import com.example.eazyffmpeg.functions.ffmpegTextOnVideo
-import com.example.eazyffmpeg.functions.helpers.Utilities
 import java.io.File
 
 class activity_text : AppCompatActivity() {
@@ -44,19 +41,6 @@ class activity_text : AppCompatActivity() {
         bttn_addTextToVideo.setOnClickListener(View.OnClickListener {
 
             Toast.makeText(this,"wololo",Toast.LENGTH_LONG).show();
-
-            //call the TextOnVideo Function
-            ffmpegTextOnVideo.with(context!!)
-                    .setFile(video)
-                    .setOutputPath(Utilities.outputPath + "video")
-                    .setOutputFileName("textOnVideo_" + System.currentTimeMillis() + ".mp4")
-                    //.setFont(font) //Font .ttf of text
-                    .setText("Text Displayed on Video!!") //Text to be displayed
-                    .setColor("#50b90e") //Color of Text
-                    .setSize("34") //Size of text
-                    .addBorder(true) //This will add background with border on text
-                    .setPosition(ffmpegTextOnVideo.POSITION_CENTER_BOTTOM) //Can be selected
-                    .draw()
 
         })
 

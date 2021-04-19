@@ -13,8 +13,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.eazyffmpeg.functions.ffmpegAudioOnVideo
-import com.example.eazyffmpeg.functions.ffmpegCallback
 import java.io.File
 
 class activity_sound : AppCompatActivity() {
@@ -67,17 +65,6 @@ class activity_sound : AppCompatActivity() {
 
             Toast.makeText(this,"Button clicked",Toast.LENGTH_LONG).show();
 
-            //Kill previous running process
-            //stopRunningProcess()
-
-            //call the AudioVideoMerger
-            // test if isRunning
-            ffmpegAudioOnVideo.with(context!!)
-                    .setAudioFile(audio) //Audio File
-                    .setVideoFile(video) //Video File
-                    .setOutputPath("PATH_TO_OUTPUT_VIDEO")
-                    .setOutputFileName("merged_" + System.currentTimeMillis() + ".mp4")
-                    .merge()
 
         })
     }

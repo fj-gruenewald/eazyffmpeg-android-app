@@ -104,11 +104,13 @@
                     android:layout_height="60dp">
 
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtFilePath"
                         android:layout_width="250dp"
                         android:layout_gravity="center"
                         android:layout_height="50dp"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnFileDialog"
                         android:layout_marginLeft="10dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_folder"
@@ -231,6 +233,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Trim Video"
+                    android:id="@+id/btnProcess"
                     android:backgroundTint="@color/menuItem_green"/>
 
             </LinearLayout>
