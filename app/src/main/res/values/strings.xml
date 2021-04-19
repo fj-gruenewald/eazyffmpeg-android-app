@@ -8,10 +8,12 @@
     //Selected item for the Codec Spinner
     <string name="selected_item">Selected item:</string>
 
-    //String Array for Convert_Codecs
-    <string-array name="codecs">
-        <item>x264</item>
-        <item>x265</item>
+    //String Array for Effects
+    <string-array name="effects">
+        <item>fade-in-fade-out</item>
+        <item>slow-motion</item>
+        <item>fast-motion</item>
+        <item>reverse</item>
     </string-array>
 
     //String Array for Text Locations

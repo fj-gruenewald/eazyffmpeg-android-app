@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EazyFFMPEG">
         <activity android:name=".activity_settings"></activity>
-        <activity android:name=".activity_sound" />
+        <activity android:name=".activity_effects" />
         <activity android:name=".activity_text" />
         <activity android:name=".activity_cutting" />
         <activity
             android:name=".activity_creation"
             android:label="@string/title_activity_creation" />
-        <activity android:name=".activity_converter" />
+        <activity android:name=".activity_compress" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
