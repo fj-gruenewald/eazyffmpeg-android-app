@@ -89,7 +89,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Video Creation"
+                        android:text="Create    GIF"
                         android:textColor="#FFF"
                         android:textSize="18sp" />
 
@@ -165,9 +165,9 @@
                         android:layout_marginLeft="12dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Video Compress"
+                        android:text="Compress"
                         android:textColor="#FFF"
-                        android:textSize="16sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -245,7 +245,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginBottom="18dp"
-                        android:src="@drawable/ic_menu_sound"
+                        android:src="@drawable/ic_menu_effects"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
