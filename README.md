@@ -13,25 +13,34 @@ The app is written entirely in Kotlin and has a material design feel to it. with
 ## Functions
  - **Video Creation** <br/>
 Allows you to create videos from a single image, a series of images, multiple videos or an image and a video.
-<br/>
 
  - **Video Cutting** <br/>
 allows videos to be cropped based on time periods
-<br/>
 
  - **Video Compression** <br/>
 allows videos to be compressed to save storage space
-<br/>
 
  - **Text and Title** <br/>
 Allows you to add texts and titles to videos, with the possibility to choose the position, color and font size.
-<br/>
 
  - **Effects** <br/>
 Allows you to add effects such as fade-in-fade-out, reverse playback, slow-motion or fast-motion to your videos.
-<br/>
+
+## Installation and Usage
+
+The [User Manual]() has detailed Information on how to use the Application.
+
+## Roadmap
+ 
+See the [open issues]() for a list of proposed features and errors..
 
   <!-- LICENSE -->
 ## License
 
 Distributed under the Apache License. See `LICENSE` for more information.
+
+## Acknowledgements
+* [SSffmpegVideoOperation](https://github.com/SimformSolutionsPvtLtd/SSffmpegVideoOperation)
+* [Simform Solutions](https://github.com/SimformSolutionsPvtLtd)
+* [FilePicker by jaiselrahman](https://github.com/jaiselrahman/FilePicker)
+* [TimePickerWithSeconds by IvanKovac](https://github.com/IvanKovac/TimePickerWithSeconds)
