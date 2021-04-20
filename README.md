@@ -10,6 +10,8 @@ EazyFFMPEG for Android provides an easy to use user interface for ffmpeg based o
 ffmpeg for android wrapper SSffmpegVideoOperation by Simform Solutions Pvt Ltd . <br/>
 The app is written entirely in Kotlin and has a material design feel to it. with lots of colorful elements and icons.
 
+<br/>
+
 ## Functions
  - **Video Creation** <br/>
 Allows you to create videos from a single image, a series of images, multiple videos or an image and a video.
@@ -26,21 +28,25 @@ Allows you to add texts and titles to videos, with the possibility to choose the
  - **Effects** <br/>
 Allows you to add effects such as fade-in-fade-out, reverse playback, slow-motion or fast-motion to your videos.
 
+<br/>
+
 ## Installation and Usage
 
-The [User Manual]() has detailed Information on how to use the Application.
+The [User Manual](https://github.com/fj-gruenewald/eazyffmpeg-android-app/wiki/User-Manual) has detailed Information on how to use the Application.
+
+<br/>
 
 ## Roadmap
  
-See the [open issues]() for a list of proposed features and errors..
+See the [open issues](https://github.com/fj-gruenewald/eazyffmpeg-android-app/issues) for a list of proposed features and errors..
 
-  <!-- LICENSE -->
+<br/>
+
 ## License
 
 Distributed under the Apache License. See `LICENSE` for more information.
 
 ## Acknowledgements
-* [SSffmpegVideoOperation](https://github.com/SimformSolutionsPvtLtd/SSffmpegVideoOperation)
-* [Simform Solutions](https://github.com/SimformSolutionsPvtLtd)
+* [SSffmpegVideoOperation by SimformSolutionsPvtLtd](https://github.com/SimformSolutionsPvtLtd/SSffmpegVideoOperation)
 * [FilePicker by jaiselrahman](https://github.com/jaiselrahman/FilePicker)
 * [TimePickerWithSeconds by IvanKovac](https://github.com/IvanKovac/TimePickerWithSeconds)

@@ -30,6 +30,20 @@
         <item>video from video and image</item>
     </string-array>
 
+    //String Array for text color
+    <string-array name="text_color">
+        <item>white</item>
+        <item>black</item>
+    </string-array>
+
+    //String Array for text size
+    <string-array name="text_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>X Large</item>
+    </string-array>
+
     //String Array for Text Locations
     <string-array name="text_location">
         <item>Center Top</item>
