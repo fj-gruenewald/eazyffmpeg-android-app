@@ -11,39 +11,24 @@ ffmpeg for android wrapper SSffmpegVideoOperation by Simform Solutions Pvt Ltd .
 The app is written entirely in Kotlin and has a material design feel to it. with lots of colorful elements and icons.
 
 ## Functions
- - **Video Creation**
-      - first
-      - second
-      - third
-      - fourth
+ - **Video Creation** <br/>
+Allows you to create videos from a single image, a series of images, multiple videos or an image and a video.
 <br/>
 
- - **Video Cutting**
-      - first
-      - second
-      - third
-      - fourth
+ - **Video Cutting** <br/>
+allows videos to be cropped based on time periods
 <br/>
 
- - **Video Compression**
-      - first
-      - second
-      - third
-      - fourth
+ - **Video Compression** <br/>
+allows videos to be compressed to save storage space
 <br/>
 
- - **Text and Title**
-      - first
-      - second
-      - third
-      - fourth
+ - **Text and Title** <br/>
+Allows you to add texts and titles to videos, with the possibility to choose the position, color and font size.
 <br/>
 
- - **Effects**
-       - first
-      - second
-      - third
-      - fourth
+ - **Effects** <br/>
+Allows you to add effects such as fade-in-fade-out, reverse playback, slow-motion or fast-motion to your videos.
 <br/>
 
   <!-- LICENSE -->
