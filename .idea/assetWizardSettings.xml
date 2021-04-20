@@ -303,8 +303,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_magic_wand" />
-                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\ffmpeg-gui-app\assets\effects\magic-wand.svg" />
+                            <entry key="outputName" value="ic_choose" />
+                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\eazyffmpeg-android-app\assets\creation\choose.svg" />
                           </map>
                         </option>
                       </PersistentState>

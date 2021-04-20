@@ -5,6 +5,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    //Error Strings
+
+    //File Strings
+
+    //Activity - Video Creation
+
     //Selected item for the Codec Spinner
     <string name="selected_item">Selected item:</string>
 
@@ -14,6 +20,14 @@
         <item>slow-motion</item>
         <item>fast-motion</item>
         <item>reverse</item>
+    </string-array>
+
+    //String Array for Creation Methods
+    <string-array name="creation_Methods">
+        <item>video from image</item>
+        <item>video from videos</item>
+        <item>video from multiple images</item>
+        <item>video from video and image</item>
     </string-array>
 
     //String Array for Text Locations

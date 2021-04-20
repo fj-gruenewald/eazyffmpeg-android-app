@@ -124,7 +124,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Card 3 -->
+        <!-- Card 2 -->
         <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view3"
@@ -139,19 +139,19 @@
             android:layout_marginBottom="8dp"
             card_view:cardCornerRadius="4dp">
 
-            <!-- Card 3 Layout -->
+            <!-- Card 2 Layout -->
             <LinearLayout
                 android:background="@color/cardbackground"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <!-- Card 3 Header -->
+                <!-- Card 2 Header -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp">
 
-                    <!-- Card 3 Header Icon -->
+                    <!-- Card 2 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -159,7 +159,7 @@
                         android:layout_height="50dp"
                         android:src="@drawable/ic_magic_wand"/>
 
-                    <!-- Card 3 Header Text -->
+                    <!-- Card 2 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -171,7 +171,7 @@
 
                 </LinearLayout>
 
-                <!-- Card 3 Header Input -->
+                <!-- Card 2 Header Input -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp">
@@ -187,7 +187,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Card 2 -->
+        <!-- Card 3 -->
         <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="130dp"
@@ -200,19 +200,19 @@
             card_view:cardElevation="10dp"
             card_view:cardPreventCornerOverlap="true">
 
-            <!-- Card 2 Layout -->
+            <!-- Card 3 Layout -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/cardbackground"
                 android:orientation="vertical">
 
-                <!-- Card 2 Header -->
+                <!-- Card 3 Header -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp">
 
-                    <!-- Card 2 Header Icon -->
+                    <!-- Card 3 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="30dp"
                         android:layout_height="50dp"
@@ -220,7 +220,7 @@
                         android:layout_marginTop="5dp"
                         android:src="@drawable/ic_info" />
 
-                    <!-- Card 2 Header Text -->
+                    <!-- Card 3 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -232,7 +232,7 @@
 
                 </LinearLayout>
 
-                <!-- Card 2 Input -->
+                <!-- Card 3 Input -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp">
@@ -249,7 +249,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Card 3-->
+        <!-- Card 4 -->
         <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_actionButton"
