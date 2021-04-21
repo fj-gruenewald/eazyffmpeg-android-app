@@ -62,21 +62,17 @@ class activity_effects : AppCompatActivity() {
                 //Do the right action for every effect
                 when (effectsSpinner.selectedItem) {
                     "fade-in-fade-out" -> {
-                        Toast.makeText(this, "fade", Toast.LENGTH_SHORT).show()
                         FFMPEG_Fade()
                     }
                     "slow-motion" -> {
-                        Toast.makeText(this, "slow", Toast.LENGTH_SHORT).show()
                         isSlowMo = true
                         FFMPEG_Motion()
                     }
                     "fast-motion" -> {
-                        Toast.makeText(this, "fast", Toast.LENGTH_SHORT).show()
                         isSlowMo = false
                         FFMPEG_Motion()
                     }
                     "reverse" -> {
-                        Toast.makeText(this, "reverse", Toast.LENGTH_SHORT).show()
                         FFMPEG_Reverse()
                     }
                 }

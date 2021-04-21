@@ -53,6 +53,7 @@
         <item>Rotate 180</item>
         <item>Rotate 270</item>
         <item>Vertical Flip</item>
-        <item>Aspect Ratio</item>
+        <item>Aspect Ratio 16:9</item>
+        <item>Aspect Ratio 4:3</item>
     </string-array>
 </resources>

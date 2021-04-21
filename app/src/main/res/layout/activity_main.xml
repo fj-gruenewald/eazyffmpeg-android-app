@@ -306,7 +306,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Transform Video"
+                        android:text="Crop &amp; \nFlip"
                         android:textColor="#FFF"
                         android:textSize="18sp" />
 
