@@ -1,23 +1,16 @@
 package com.example.eazyffmpeg
 
-import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.pm.PackageManager
 import android.content.Intent
 import android.media.MediaMetadataRetriever
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.model.MediaFile
 import com.simform.videooperations.*
-import org.w3c.dom.Text
-import java.io.File
-import java.util.ArrayList
+import java.util.*
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.TimeUnit
 
@@ -35,7 +28,6 @@ class activity_effects : AppCompatActivity() {
         setContentView(R.layout.activity_effects)
 
         //UI Variables
-        val txtFilePath = findViewById<EditText>(R.id.txtFilePath)
         val btnFileDialog = findViewById<ImageView>(R.id.btnFileDialog)
 
         val effectsSpinner = findViewById<Spinner>(R.id.effectsSpinner)
@@ -44,7 +36,7 @@ class activity_effects : AppCompatActivity() {
         val effects = resources.getStringArray(R.array.effects)
 
         //Open File Dialog Button
-        btnFileDialog.setOnClickListener() {
+        btnFileDialog.setOnClickListener {
             //File Picker
             Common.selectFile(
                 this,
@@ -55,7 +47,7 @@ class activity_effects : AppCompatActivity() {
         }
 
         //The Main Process
-        btnApplyEffect.setOnClickListener() {
+        btnApplyEffect.setOnClickListener {
 
             //check if a video is selected
             if (isInputVideoSelected == true) {
@@ -76,9 +68,9 @@ class activity_effects : AppCompatActivity() {
                         FFMPEG_Reverse()
                     }
                 }
-            }
-            else{
-                Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, getString(R.string.emptyVideoSelection), Toast.LENGTH_SHORT)
+                    .show()
             }
 
         }
@@ -95,17 +87,14 @@ class activity_effects : AppCompatActivity() {
             effectsSpinner.onItemSelectedListener = object :
                 AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(
-                    parent: AdapterView<*>, view: View, position: Int, id: Long
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
                 ) {
-                    Toast.makeText(
-                        this@activity_effects,
-                        getString(R.string.selected_item) + " " +
-                                "" + effects[position], Toast.LENGTH_SHORT
-                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
-                    // write code to perform some action
                 }
             }
         }
@@ -131,7 +120,7 @@ class activity_effects : AppCompatActivity() {
                 }
 
                 override fun success() {
-                    txtInfo.text = "Success"
+                    txtInfo.text = getString(R.string.ffmpegProcessSuccessfull)
                 }
 
                 override fun cancel() {
@@ -158,7 +147,8 @@ class activity_effects : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Success", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
 
             }
 
@@ -184,14 +174,20 @@ class activity_effects : AppCompatActivity() {
             setpts = 2.0
             atempo = 0.5
         }
-        val query = FFmpegQueryExtension.videoMotion(txtFilePath.text.toString(), outputPath, setpts, atempo)
+        val query = FFmpegQueryExtension.videoMotion(
+            txtFilePath.text.toString(),
+            outputPath,
+            setpts,
+            atempo
+        )
         CallBackOfQuery.callQuery(this, query, object : FFmpegCallBack {
             override fun process(logMessage: LogMessage) {
                 txtInfo.text = logMessage.text
             }
 
             override fun success() {
-                txtInfo.text = String.format("Success", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull))
 
             }
 
@@ -225,7 +221,11 @@ class activity_effects : AppCompatActivity() {
                         }
                     }
                 } else {
-                    Toast.makeText(this, "no video", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

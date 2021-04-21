@@ -3,10 +3,10 @@ package com.example.eazyffmpeg
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaMetadataRetriever
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.ikovac.timepickerwithseconds.MyTimePickerDialog
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.model.MediaFile
@@ -14,8 +14,6 @@ import com.simform.videooperations.*
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
-import java.util.concurrent.CompletableFuture
-import java.util.concurrent.TimeUnit
 
 class activity_cutting : AppCompatActivity() {
 
@@ -54,20 +52,30 @@ class activity_cutting : AppCompatActivity() {
         }
 
         //Get the start time for the cut
-        btnFrom.setOnClickListener() {
-            if (!TextUtils.isEmpty(maxTimeString) && !TextUtils.equals(maxTimeString, "00:00:00")) {
+        btnFrom.setOnClickListener {
+            if (!TextUtils.isEmpty(maxTimeString) && !TextUtils.equals(
+                    maxTimeString,
+                    getString(R.string.emptyTimestamp)
+                )
+            ) {
                 selectTime(txtFrom, true)
             } else {
-                Toast.makeText(this, "No Input Video selected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.emptyVideoSelection), Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
         //Get the end time for the cut
-        btnTo.setOnClickListener() {
-            if (!TextUtils.isEmpty(maxTimeString) && !TextUtils.equals(maxTimeString, "00:00:00")) {
+        btnTo.setOnClickListener {
+            if (!TextUtils.isEmpty(maxTimeString) && !TextUtils.equals(
+                    maxTimeString,
+                    getString(R.string.emptyTimestamp)
+                )
+            ) {
                 selectTime(txtTo, false)
             } else {
-                Toast.makeText(this, "No Input Video selected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.emptyVideoSelection), Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
@@ -76,19 +84,25 @@ class activity_cutting : AppCompatActivity() {
         {
             when {
                 TextUtils.isEmpty(maxTimeString) -> {
-                    Toast.makeText(this, "No Input Video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.emptyMaxTimeString), Toast.LENGTH_SHORT)
+                        .show()
                 }
                 TextUtils.isEmpty(startTimeString) -> {
-                    Toast.makeText(this, "No Input Video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyStartTimeString),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
                 TextUtils.isEmpty(endTimeString) -> {
-                    Toast.makeText(this, "No Input Video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.emptyEndTimeString), Toast.LENGTH_SHORT)
+                        .show()
                 }
                 else -> {
                     if (isValidation()) {
                         cuttingProcess()
                     } else {
-                        Toast.makeText(this, "start and end time invalid", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, getString(R.string.differingTime), Toast.LENGTH_SHORT)
                             .show()
                     }
                 }
@@ -108,7 +122,7 @@ class activity_cutting : AppCompatActivity() {
                 maxTimeString = Common.stringForTime(mediaFiles[0].duration)
                 //txtTo.text = "Selected video max time : $maxTimeString"
             } else {
-                Toast.makeText(this, "No Video selected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.emptyVideoMedia), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -129,7 +143,7 @@ class activity_cutting : AppCompatActivity() {
                     endTimeString = selectedTime
                 }
             } else {
-                Toast.makeText(this, "Time must be in Range", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.differingTime), Toast.LENGTH_SHORT).show()
             }
         }, 0, 0, 0, true).show()
     }
@@ -192,7 +206,8 @@ class activity_cutting : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Successfull: ", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
             }
 
             override fun cancel() {

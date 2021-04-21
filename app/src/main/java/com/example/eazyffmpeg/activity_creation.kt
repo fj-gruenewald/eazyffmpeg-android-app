@@ -3,14 +3,14 @@ package com.example.eazyffmpeg
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaMetadataRetriever
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.model.MediaFile
 import com.simform.videooperations.*
-import java.util.ArrayList
+import java.util.*
 import java.util.concurrent.CompletableFuture
 
 class activity_creation : AppCompatActivity() {
@@ -23,7 +23,7 @@ class activity_creation : AppCompatActivity() {
     var height: Int? = 0
     var width: Int? = 0
 
-    var actionToPerform: String = "-/-"
+    var actionToPerform: String = getString(R.string.placeholderString)
     //action to perform
     // 1 --> video from image
     // 2 --> video from videos
@@ -48,7 +48,6 @@ class activity_creation : AppCompatActivity() {
         //Text
         val txtFilePath = findViewById<EditText>(R.id.txtFilePath)
         val txtImageFilePath = findViewById<EditText>(R.id.txtImageFilePath)
-        val txtInfo = findViewById<TextView>(R.id.txtInfo)
 
         //Check if Spinner is empty ==> give him some strings
         if (methodSpinner != null) {
@@ -75,7 +74,7 @@ class activity_creation : AppCompatActivity() {
         }
 
         //Button Video FIle Dialog
-        btnFileDialog.setOnClickListener() {
+        btnFileDialog.setOnClickListener {
             when (methodSpinner.selectedItem) {
                 "video from videos" -> {
                     //File Picker for multiple videos
@@ -104,7 +103,7 @@ class activity_creation : AppCompatActivity() {
                 else -> {
                     Toast.makeText(
                         this,
-                        "choosen method does not contain videos",
+                        getString(R.string.actionWithoutVideo),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -113,7 +112,7 @@ class activity_creation : AppCompatActivity() {
         }
 
         //Button Image File Dialog
-        btnImageDialog.setOnClickListener() {
+        btnImageDialog.setOnClickListener {
             when (methodSpinner.selectedItem) {
                 "video from multiple images" -> {
                     //File Picker for multiple images
@@ -154,7 +153,7 @@ class activity_creation : AppCompatActivity() {
                 else -> {
                     Toast.makeText(
                         this,
-                        "choosen method does not contain images",
+                        getString(R.string.actionWithoutImage),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
@@ -179,7 +178,11 @@ class activity_creation : AppCompatActivity() {
                     FFMPEG_CombineImageAndVideo()
                 }
                 else -> {
-                    Toast.makeText(this, "smt went wrong with your selection", Toast.LENGTH_SHORT)
+                    Toast.makeText(
+                        this,
+                        getString(R.string.creationMethodError),
+                        Toast.LENGTH_SHORT
+                    )
                         .show()
                 }
             }
@@ -207,7 +210,8 @@ class activity_creation : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Successfull", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
             }
 
             override fun cancel() {
@@ -227,7 +231,8 @@ class activity_creation : AppCompatActivity() {
                 isInputImageSelected = true
             } else {
                 isInputImageSelected = false
-                Toast.makeText(this, "image not selected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.emptyImageSelection), Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
@@ -259,7 +264,8 @@ class activity_creation : AppCompatActivity() {
                 }
 
                 override fun success() {
-                    txtInfo.text = String.format("Successfull", outputPath)
+                    txtInfo.text =
+                        String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
 
                 }
 
@@ -296,7 +302,11 @@ class activity_creation : AppCompatActivity() {
                         }
                     }
                 } else {
-                    Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
@@ -326,7 +336,8 @@ class activity_creation : AppCompatActivity() {
                 }
 
                 override fun success() {
-                    txtInfo.text = String.format("successfull", outputPath)
+                    txtInfo.text =
+                        String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
 
                 }
 
@@ -354,7 +365,11 @@ class activity_creation : AppCompatActivity() {
                         "$size" + (if (size == 1) " Image " else " Images ") + "selected"
                     isInputImageSelected = true
                 } else {
-                    Toast.makeText(this, "no image selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyImageSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
@@ -394,7 +409,8 @@ class activity_creation : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Successfull", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
             }
 
             override fun cancel() {
@@ -424,15 +440,24 @@ class activity_creation : AppCompatActivity() {
                         height = bit?.height
                     }
                 } else {
-                    Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+            +
             Common.IMAGE_FILE_REQUEST_CODE -> {
                 if (mediaFiles != null && mediaFiles.isNotEmpty()) {
                     txtImageFilePath.text = mediaFiles[0].path
                     isInputImageSelected = true
                 } else {
-                    Toast.makeText(this, "no image selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyImageSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

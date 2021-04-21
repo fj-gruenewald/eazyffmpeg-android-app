@@ -5,11 +5,42 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    //Error Strings
+    //-----Codebehind Strings-----
 
-    //File Strings
+    //General
+    <string name="emptyVideoSelection">No video selected</string>
+    <string name="emptyImageSelection">No image selected</string>
+    <string name="emptyVideoMedia">No Video in Media List</string>
+    <string name="emptyImageMedia">No Image in Media List</string>
+    <string name="ffmpegProcessSuccessfull">finished successfully</string>
+    <string name="placeholderString">none</string>
 
-    //Activity - Video Creation
+    //Video Creation
+    <string name="emptyTimestamp">00:00:00</string>
+    <string name="emptyMaxTimeString">couldnt get video duration</string>
+    <string name="emptyStartTimeString">start time Field is empty</string>
+    <string name="emptyEndTimeString">end time Field is empty</string>
+    <string name="differingTime">start and end time dont match</string>
+    <string name="actionWithoutVideo">choosen action does not contain videos</string>
+    <string name="actionWithoutImage">choosen action does not contain images</string>
+    <string name="creationMethodError">error choosing creation method</string>
+
+    //Text and Title
+    <string name="emptyInputText">no input text was set</string>
+    <string name="emptyXPosition">no x postion was set</string>
+    <string name="emptyYPosition">np y position was set</string>
+    <string name="xPositionNotValid">x position value is too high (max 100%)</string>
+    <string name="yPositionNotValid">y position value is too high (max 100%)</string>
+    <string name="standardFont">ShortBaby.ttf</string>
+    <string name="colorWhite">white</string>
+    <string name="colorBlack">black</string>
+    <string name="colorBlue">blue</string>
+    <string name="colorRed">red</string>
+    <string name="colorYellow">yellow</string>
+    <string name="colorGreen">green</string>
+
+
+    //UI Strings
 
     //Selected item for the Codec Spinner
     <string name="selected_item">Selected item:</string>

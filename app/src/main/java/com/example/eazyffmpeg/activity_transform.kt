@@ -2,26 +2,21 @@ package com.example.eazyffmpeg
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.media.Image
-import android.media.MediaMetadataRetriever
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.model.MediaFile
 import com.simform.videooperations.*
-import java.util.ArrayList
-import java.util.concurrent.CompletableFuture
-import java.util.concurrent.TimeUnit
+import java.util.*
 
 class activity_transform : AppCompatActivity() {
 
     //Variables
     private var isInputVideoSelected: Boolean = false
     var mediaFiles: List<MediaFile>? = null
-    var retriever: MediaMetadataRetriever? = null
-    var aspectRatio: String = "none"
+    var aspectRatio: String = getString(R.string.placeholderString)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,16 +27,12 @@ class activity_transform : AppCompatActivity() {
         val transformationSpinner = findViewById<Spinner>(R.id.transformationSpinner)
         val transformations = resources.getStringArray(R.array.transformations)
 
-        //Text
-        val txtFilePath = findViewById<EditText>(R.id.txtFilePath)
-        val txtInfo = findViewById<TextView>(R.id.txtInfo)
-
         //Button
         val btnFileDialog = findViewById<ImageView>(R.id.btnFileDialog)
         val btnApplyTransform = findViewById<Button>(R.id.btnApplyTransform)
 
         //Open the File Dialog
-        btnFileDialog.setOnClickListener() {
+        btnFileDialog.setOnClickListener {
             //File Picker
             Common.selectFile(
                 this,
@@ -52,7 +43,7 @@ class activity_transform : AppCompatActivity() {
         }
 
         //Do the Transformation
-        btnApplyTransform.setOnClickListener() {
+        btnApplyTransform.setOnClickListener {
 
             //check if a video is selected
             if (isInputVideoSelected == true) {
@@ -81,7 +72,8 @@ class activity_transform : AppCompatActivity() {
                     }
                 }
             } else {
-                Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.emptyVideoSelection), Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
@@ -117,7 +109,8 @@ class activity_transform : AppCompatActivity() {
     private fun rotateDegree(degree: Int, isRotate: Boolean) {
         when {
             !isInputVideoSelected -> {
-                Toast.makeText(this, "input video not valid", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.emptyVideoSelection), Toast.LENGTH_SHORT)
+                    .show()
             }
             else -> {
                 FFMPEG_Rotate(degree, isRotate)
@@ -142,7 +135,8 @@ class activity_transform : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Successfull", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
             }
 
             override fun cancel() {
@@ -169,7 +163,8 @@ class activity_transform : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Successfull", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
             }
 
             override fun cancel() {
@@ -189,7 +184,11 @@ class activity_transform : AppCompatActivity() {
                 if (mediaFiles != null && mediaFiles.isNotEmpty()) {
                     isInputVideoSelected = true
                 } else {
-                    Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

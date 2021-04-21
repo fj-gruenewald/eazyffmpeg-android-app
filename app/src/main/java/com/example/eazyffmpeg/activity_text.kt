@@ -1,19 +1,17 @@
 package com.example.eazyffmpeg
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.media.MediaMetadataRetriever
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.model.MediaFile
 import com.simform.videooperations.*
-import java.io.File
-import java.util.ArrayList
+import java.util.*
 import java.util.concurrent.CompletableFuture
 
 class activity_text : AppCompatActivity() {
@@ -40,8 +38,6 @@ class activity_text : AppCompatActivity() {
         val btnAddTextToVideo = findViewById<Button>(R.id.btnAddTextToVideo)
 
         //Text
-        val txtFilePath = findViewById<EditText>(R.id.txtFilePath)
-        val txtInfo = findViewById<TextView>(R.id.txtInfo)
         val txtInputText = findViewById<EditText>(R.id.txtInputText)
         val txtXInput = findViewById<EditText>(R.id.txtXInput)
         val txtYInput = findViewById<EditText>(R.id.txtYInput)
@@ -51,7 +47,7 @@ class activity_text : AppCompatActivity() {
         val text_size = resources.getStringArray(R.array.text_size)
 
         //Open the File Dialog
-        btnFileDialog.setOnClickListener() {
+        btnFileDialog.setOnClickListener {
             //File Picker
             Common.selectFile(
                 this,
@@ -62,25 +58,36 @@ class activity_text : AppCompatActivity() {
         }
 
         //Do the Text Add process
-        btnAddTextToVideo.setOnClickListener() {
-            when{
+        btnAddTextToVideo.setOnClickListener {
+            when {
                 !isInputVideoSelected -> {
-                    Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
                 TextUtils.isEmpty(txtInputText.text.toString()) -> {
-                    Toast.makeText(this, "no input text set", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.emptyInputText), Toast.LENGTH_SHORT)
+                        .show()
                 }
                 TextUtils.isEmpty(txtXInput.text.toString()) -> {
-                    Toast.makeText(this, "no x postion", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.emptyXPosition), Toast.LENGTH_SHORT)
+                        .show()
                 }
-                txtXInput.text.toString().toFloat() > 100 || txtXInput.text.toString().toFloat() <= 0 -> {
-                    Toast.makeText(this, "x position value invalid", Toast.LENGTH_SHORT).show()
+                txtXInput.text.toString().toFloat() > 100 || txtXInput.text.toString()
+                    .toFloat() <= 0 -> {
+                    Toast.makeText(this, getString(R.string.xPositionNotValid), Toast.LENGTH_SHORT)
+                        .show()
                 }
                 TextUtils.isEmpty(txtYInput.text.toString()) -> {
-                    Toast.makeText(this, "no y position", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.emptyYPosition), Toast.LENGTH_SHORT)
+                        .show()
                 }
-                txtYInput.text.toString().toFloat() > 100 || txtYInput.text.toString().toFloat() <= 0 -> {
-                    Toast.makeText(this, "y position invalid", Toast.LENGTH_SHORT).show()
+                txtYInput.text.toString().toFloat() > 100 || txtYInput.text.toString()
+                    .toFloat() <= 0 -> {
+                    Toast.makeText(this, getString(R.string.yPositionNotValid), Toast.LENGTH_SHORT)
+                        .show()
                 }
                 else -> {
                     FFMPEG_AddTextToVideo()
@@ -162,38 +169,38 @@ class activity_text : AppCompatActivity() {
 
         //build the text size
         val sizeSpinner = findViewById<Spinner>(R.id.sizeSpinner)
-        when(sizeSpinner.selectedItem){
-            "Small" ->{
+        when (sizeSpinner.selectedItem) {
+            "Small" -> {
                 textSize = 68
             }
-            "Medium" ->{
+            "Medium" -> {
                 textSize = 108
             }
-            "Large" ->{
+            "Large" -> {
                 textSize = 148
             }
         }
 
         //build the color
         val colorSpinner = findViewById<Spinner>(R.id.colorSpinner)
-        when(colorSpinner.selectedItem){
-            "White" ->{
-                textColor = "white"
+        when (colorSpinner.selectedItem) {
+            "White" -> {
+                textColor = getString(R.string.colorWhite)
             }
-            "Black" ->{
-                textColor = "black"
+            "Black" -> {
+                textColor = getString(R.string.colorBlack)
             }
-            "Red" ->{
-                textColor = "red"
+            "Red" -> {
+                textColor = getString(R.string.colorRed)
             }
-            "Blue" ->{
-                textColor = "blue"
+            "Blue" -> {
+                textColor = getString(R.string.colorBlue)
             }
-            "Green" ->{
-                textColor = "green"
+            "Green" -> {
+                textColor = getString(R.string.colorGreen)
             }
-            "Yellow" ->{
-                textColor = "green"
+            "Yellow" -> {
+                textColor = getString(R.string.colorYellow)
             }
         }
 
@@ -209,11 +216,16 @@ class activity_text : AppCompatActivity() {
         }
 
         //get the Path
-        val fontPath = Common.getFileFromAssets(this, "ShortBaby.ttf").absolutePath
+        val fontPath = Common.getFileFromAssets(this, getString(R.string.standardFont)).absolutePath
 
         //do the process
         var accept: Boolean = true
-        val query = FFmpegQueryExtension.addTextOnVideo(txtFilePath.text.toString(), txtInputText.text.toString(), xPos, yPos, fontPath = fontPath,
+        val query = FFmpegQueryExtension.addTextOnVideo(
+            txtFilePath.text.toString(),
+            txtInputText.text.toString(),
+            xPos,
+            yPos,
+            fontPath = fontPath,
             isTextBackgroundDisplay = true,
             fontSize = textSize,
             fontcolor = textColor,
@@ -225,7 +237,8 @@ class activity_text : AppCompatActivity() {
             }
 
             override fun success() {
-                txtInfo.text = String.format("Successfull", outputPath)
+                txtInfo.text =
+                    String.format(getString(R.string.ffmpegProcessSuccessfull), outputPath)
             }
 
             override fun cancel() {
@@ -253,7 +266,11 @@ class activity_text : AppCompatActivity() {
                         height = bit?.height
                     }
                 } else {
-                    Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }

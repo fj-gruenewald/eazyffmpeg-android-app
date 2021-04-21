@@ -5,13 +5,16 @@ import android.content.Intent
 import android.media.MediaMetadataRetriever
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.jaiselrahman.filepicker.activity.FilePickerActivity
 import com.jaiselrahman.filepicker.model.MediaFile
 import com.simform.videooperations.*
 import java.io.File
-import java.util.ArrayList
+import java.util.*
 import java.util.concurrent.CompletableFuture
 
 class activity_converter : AppCompatActivity() {
@@ -30,18 +33,21 @@ class activity_converter : AppCompatActivity() {
         //UI Variables
         val openFolderImageView = findViewById<ImageView>(R.id.btnFileDialog)
         val btnCompress = findViewById<Button>(R.id.btnCompress)
-        val txtFilePath = findViewById<EditText>(R.id.txtFilePath)
-        val txtInfo = findViewById<TextView>(R.id.txtInfo)
 
         //File Dialog
         openFolderImageView.setOnClickListener(View.OnClickListener {
             //File Picker
-            Common.selectFile(this, maxSelection = 1, isImageSelection = false, isAudioSelection = false)
+            Common.selectFile(
+                this,
+                maxSelection = 1,
+                isImageSelection = false,
+                isAudioSelection = false
+            )
         })
 
         //Start Process
         btnCompress.setOnClickListener(View.OnClickListener {
-            compressProcess()
+            FFMPEG_Compress()
         })
     }
 
@@ -61,20 +67,25 @@ class activity_converter : AppCompatActivity() {
                         height = bit?.height
                     }
                 } else {
-                    Toast.makeText(this, "no video selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        getString(R.string.emptyVideoSelection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
     }
 
     //The FFMPEG Process
-    private fun compressProcess() {
+    private fun FFMPEG_Compress() {
 
         val txtInfo = findViewById<TextView>(R.id.txtInfo)
         val txtFilePath = findViewById<TextView>(R.id.txtFilePath)
         val outputPath = Common.getFilePath(this, Common.VIDEO)
 
-        val query = FFmpegQueryExtension.compressor(txtFilePath.text.toString(), width, height, outputPath)
+        val query =
+            FFmpegQueryExtension.compressor(txtFilePath.text.toString(), width, height, outputPath)
         CallBackOfQuery.callQuery(this, query, object : FFmpegCallBack {
             override fun process(logMessage: LogMessage) {
                 txtInfo.text = logMessage.text
@@ -82,9 +93,11 @@ class activity_converter : AppCompatActivity() {
 
             @SuppressLint("SetTextI18n")
             override fun success() {
-                txtInfo.text = String.format("Sucessful: ", outputPath, Common.getFileSize(
-                    File(outputPath)
-                ))
+                txtInfo.text = String.format(
+                    getString(R.string.ffmpegProcessSuccessfull), outputPath, Common.getFileSize(
+                        File(outputPath)
+                    )
+                )
             }
 
             override fun cancel() {
@@ -101,7 +114,7 @@ class activity_converter : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK && data != null) {
             mediaFiles = data.getParcelableArrayListExtra(FilePickerActivity.MEDIA_FILES)
-            selectedFiles(mediaFiles,requestCode)
+            selectedFiles(mediaFiles, requestCode)
 
             val txtFilePath = findViewById<TextView>(R.id.txtFilePath)
             if (mediaFiles != null && (mediaFiles as ArrayList<MediaFile>).isNotEmpty()) {
