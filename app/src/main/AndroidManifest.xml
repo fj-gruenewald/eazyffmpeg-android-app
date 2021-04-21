@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_appicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EazyFFMPEG">
-        <activity android:name=".activity_settings"></activity>
+        <activity android:name=".activity_transform"></activity>
         <activity android:name=".activity_effects" />
         <activity android:name=".activity_text" />
         <activity android:name=".activity_cutting" />

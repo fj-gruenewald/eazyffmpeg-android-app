@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun settingsClick(view:View)
     {
-        val intent = Intent(this, activity_settings::class.java)
+        val intent = Intent(this, activity_transform::class.java)
         startActivity(intent)
     }
 

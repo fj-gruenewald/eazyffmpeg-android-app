@@ -303,8 +303,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_choose" />
-                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\eazyffmpeg-android-app\assets\creation\choose.svg" />
+                            <entry key="outputName" value="ic_menu_transform" />
+                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\eazyffmpeg-android-app\assets\transform\scale.svg" />
                           </map>
                         </option>
                       </PersistentState>

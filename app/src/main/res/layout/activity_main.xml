@@ -298,7 +298,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginBottom="18dp"
-                        android:src="@drawable/ic_menu_settings"
+                        android:src="@drawable/ic_menu_transform"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -306,7 +306,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Settings"
+                        android:text="Transform Video"
                         android:textColor="#FFF"
                         android:textSize="18sp" />
 

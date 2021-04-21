@@ -46,4 +46,13 @@
         <item>Medium</item>
         <item>Large</item>
     </string-array>
+
+    //String Array for text size
+    <string-array name="transformations">
+        <item>Rotaten 90</item>
+        <item>Rotate 180</item>
+        <item>Rotate 270</item>
+        <item>Vertical Flip</item>
+        <item>Aspect Ratio</item>
+    </string-array>
 </resources>
