@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Some Colors -->
+    <color name="appColorLight">#cfc5a5</color>
+    <color name="appColorDark">#2C333A</color>
+    <color name="appColorWhite">#FFFFFF</color>
+    <color name="appColorBlack">#000000</color>
+
+
+    <!-- Colors for the Cards -->
+    <color name="cardbackground">#2C333A</color>
+
+    <!-- Colors for the Menu Items -->
+    <color name="menuItem_blue">#1a303a</color>
+    <color name="menuItem_green">#1d6d64</color>
+    <color name="menuItem_lightGreen">#049570</color>
+    <color name="menuItem_orange">#df6b0f</color>
+    <color name="menuItem_red">#bf3b1a</color>
+    <color name="menuItem_yellow">#ce9b1e</color>
+
+    <!-- Pastel Color Palette for the Main Menu -->
+    <color name="mainBackground">#21272D</color>
+    <color name="menuBackground">#2C333A</color>
+    <color name="palettePastel_creme_dark">#796b40</color>
+    <color name="palettePastel_brown">#6c5b3d</color>
+    <color name="palettePastel_lightblue">#2d6e93</color>
+</resources>

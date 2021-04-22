@@ -44,7 +44,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="Video Creation"
+                    android:text="@string/menuItemVideoCreation"
                     android:textColor="#FFF"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -91,7 +91,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Choose Creation Method"
+                        android:text="@string/videoCreationCreationSpinner"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -153,7 +153,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Input Video File*s"
+                        android:text="@string/generalInputVideo"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -226,7 +226,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Input Image File*s"
+                        android:text="@string/generalInputImage"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -298,7 +298,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Process Info"
+                        android:text="@string/generalInformation"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -312,7 +312,7 @@
                         android:id="@+id/txtInfo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Information"
+                        android:text="@string/generalInform"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -351,7 +351,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:backgroundTint="@color/menuItem_blue"
-                    android:text="Create Video" />
+                    android:text="@string/videoCreationApplyButton" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,48 +7,47 @@
 
     <!-- Main Layout -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <!-- Activity Header -->
-    <androidx.cardview.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view0"
-        card_view:cardPreventCornerOverlap="true"
-        card_view:cardElevation="10dp"
-        android:layout_gravity="top"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        card_view:cardCornerRadius="8dp">
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view0"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="true">
 
-        <!-- Activity Header Layout -->
+            <!-- Activity Header Layout -->
             <LinearLayout
-                android:background="@drawable/menuitem_orange"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/menuitem_orange">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="30dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_menu_text"/>
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_menu_text" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Text &amp; Title"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/menuItemVideoText"
                     android:textColor="#FFF"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!-- Card 1 -->
         <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -92,7 +90,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Input File"
+                        android:text="@string/generalInputFile"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -106,8 +104,8 @@
                         android:id="@+id/txtFilePath"
                         android:layout_width="270dp"
                         android:layout_height="50dp"
-                        android:textSize="10dp"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:textSize="10dp" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/btnFileDialog"
@@ -122,26 +120,25 @@
         </androidx.cardview.widget.CardView>
 
         <!-- Card 2 -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view1"
-            card_view:cardPreventCornerOverlap="true"
-            card_view:cardElevation="10dp"
-            android:layout_gravity="top"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="top"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            card_view:cardCornerRadius="4dp">
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="true">
 
             <!-- Card 2 Layout -->
             <LinearLayout
-                android:background="@color/cardbackground"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/cardbackground"
+                android:orientation="vertical">
 
                 <!-- Card 2 Header -->
                 <LinearLayout
@@ -150,27 +147,27 @@
 
                     <!-- Card 2 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_menu_text"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_menu_text" />
 
                     <!-- Card 2 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
-                        android:text="Text"
-                        android:textSize="16sp"/>
+                        android:text="@string/videoText"
+                        android:textSize="16sp" />
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/txtInputText"
                         android:layout_width="190dp"
-                        android:layout_gravity="center"
-                        android:layout_height="50dp"/>
+                        android:layout_height="50dp"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -178,26 +175,25 @@
         </androidx.cardview.widget.CardView>
 
         <!-- Card 3 -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view2"
-            card_view:cardPreventCornerOverlap="true"
-            card_view:cardElevation="10dp"
-            android:layout_gravity="top"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            card_view:cardCornerRadius="4dp">
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="true">
 
             <!-- Card 3 Layout -->
             <LinearLayout
-                android:background="@color/cardbackground"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/cardbackground"
+                android:orientation="vertical">
 
                 <!-- Card 3 Header -->
                 <LinearLayout
@@ -206,53 +202,52 @@
 
                     <!-- Card 3 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_color_palette"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_color_palette" />
 
                     <!-- Card 3 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
-                        android:text="Color"
-                        android:textSize="16sp"/>
+                        android:text="@string/videoTextColor"
+                        android:textSize="16sp" />
 
                     <Spinner
                         android:id="@+id/colorSpinner"
-                        android:layout_gravity="center"
                         android:layout_width="190dp"
-                        android:layout_height="50dp"/>
+                        android:layout_height="50dp"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Card 4 -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view2.1"
-            card_view:cardPreventCornerOverlap="true"
-            card_view:cardElevation="10dp"
-            android:layout_gravity="top"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            card_view:cardCornerRadius="4dp">
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="true">
 
             <!-- Card 4 Layout -->
             <LinearLayout
-                android:background="@color/cardbackground"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/cardbackground"
+                android:orientation="vertical">
 
                 <!-- Card 4 Header -->
                 <LinearLayout
@@ -261,53 +256,52 @@
 
                     <!-- Card 4 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_font"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_font" />
 
                     <!-- Card 4 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
-                        android:text="Font Size"
-                        android:textSize="16sp"/>
+                        android:text="@string/videoTextSize"
+                        android:textSize="16sp" />
 
                     <Spinner
                         android:id="@+id/sizeSpinner"
-                        android:layout_gravity="center"
                         android:layout_width="190dp"
-                        android:layout_height="50dp"/>
+                        android:layout_height="50dp"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Card 3 -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view3"
-            card_view:cardPreventCornerOverlap="true"
-            card_view:cardElevation="10dp"
-            android:layout_gravity="top"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            card_view:cardCornerRadius="4dp">
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="true">
 
             <!-- Card 5 Layout -->
             <LinearLayout
-                android:background="@color/cardbackground"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/cardbackground"
+                android:orientation="vertical">
 
                 <!-- Card 5 Header -->
                 <LinearLayout
@@ -316,21 +310,21 @@
 
                     <!-- Card 5 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_position"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_position" />
 
                     <!-- Card 5 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:layout_width="200dp"
-                        android:layout_height="50dp"
-                        android:text="Location in % per axis:"
-                        android:textSize="16sp"/>
+                        android:text="@string/videoTextPosition"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -340,34 +334,34 @@
                     android:layout_height="60dp">
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
                         android:text="X:"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/txtXInput"
                         android:layout_width="100dp"
-                        android:layout_gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:layout_width="30dp"
-                        android:layout_height="match_parent"
                         android:text="Y:"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/txtYInput"
                         android:layout_width="100dp"
-                        android:layout_gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
 
@@ -415,7 +409,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Process Info"
+                        android:text="@string/generalInformation"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -429,8 +423,8 @@
                         android:id="@+id/txtInfo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textAlignment="center"
-                        android:text="Information"/>
+                        android:text="@string/generalInform"
+                        android:textAlignment="center" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -438,32 +432,31 @@
         </androidx.cardview.widget.CardView>
 
         <!-- Card 7 -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view4"
-            android:background="@color/cardbackground"
-            card_view:cardPreventCornerOverlap="true"
-            card_view:cardElevation="10dp"
-            android:layout_gravity="top"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            card_view:cardCornerRadius="4dp">
+            android:background="@color/cardbackground"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="true">
 
             <!-- Card 7 Content -->
             <com.google.android.material.button.MaterialButton
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
+                android:id="@+id/btnAddTextToVideo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Add Text"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/menuItem_orange"
-                android:id="@+id/btnAddTextToVideo"/>
+                android:text="@string/videoTextApplyButton" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>

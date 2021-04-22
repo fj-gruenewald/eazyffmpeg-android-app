@@ -16,7 +16,7 @@ class activity_transform : AppCompatActivity() {
     //Variables
     private var isInputVideoSelected: Boolean = false
     var mediaFiles: List<MediaFile>? = null
-    var aspectRatio: String = getString(R.string.placeholderString)
+    var aspectRatio: String = "none"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,11 +91,6 @@ class activity_transform : AppCompatActivity() {
                 override fun onItemSelected(
                     parent: AdapterView<*>, view: View, position: Int, id: Long
                 ) {
-                    Toast.makeText(
-                        this@activity_transform,
-                        getString(R.string.selected_item) + " " +
-                                "" + transformations[position], Toast.LENGTH_SHORT
-                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {

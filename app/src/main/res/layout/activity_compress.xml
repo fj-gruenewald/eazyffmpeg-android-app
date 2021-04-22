@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -45,7 +44,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="Video Compress"
+                    android:text="@string/menuItemVideoCompress"
                     android:textColor="#FFF"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -92,7 +91,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Input File"
+                        android:text="@string/generalInputFile"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -161,7 +160,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
-                        android:text="Process Info"
+                        android:text="@string/generalInformation"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -175,8 +174,8 @@
                         android:id="@+id/txtInfo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textAlignment="center"
-                        android:text="Information"/>
+                        android:text="@string/generalInform"
+                        android:textAlignment="center" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -208,7 +207,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/menuItem_yellow"
-                android:text="Compress Video" />
+                android:text="@string/videoCompressApplyButton" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>

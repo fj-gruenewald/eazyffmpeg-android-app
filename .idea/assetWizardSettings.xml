@@ -303,8 +303,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_crop" />
-                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\eazyffmpeg-android-app\assets\transform\crop.svg" />
+                            <entry key="outputName" value="ic_moon" />
+                            <entry key="sourceFile" value="C:\Users\D3NCE\Dokumente\Code\GitHub\eazyffmpeg-android-app\assets\main\moon.svg" />
                           </map>
                         </option>
                       </PersistentState>

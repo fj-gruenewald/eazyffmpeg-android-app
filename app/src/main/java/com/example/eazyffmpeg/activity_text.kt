@@ -111,11 +111,6 @@ class activity_text : AppCompatActivity() {
                     parent: AdapterView<*>,
                     view: View, position: Int, id: Long
                 ) {
-                    Toast.makeText(
-                        this@activity_text,
-                        getString(R.string.selected_item) + " " +
-                                "" + text_color[position], Toast.LENGTH_SHORT
-                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {

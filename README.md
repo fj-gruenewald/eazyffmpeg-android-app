@@ -7,7 +7,7 @@
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.4.21-blue.svg)](https://kotlinlang.org) [![Platform](https://img.shields.io/badge/Platform-Android-green.svg?style=flat)](https://www.android.com/) [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
 
 EazyFFMPEG for Android provides an easy to use user interface for ffmpeg based on the <br/>
-ffmpeg for android wrapper SSffmpegVideoOperation by Simform Solutions Pvt Ltd . <br/>
+ffmpeg for android wrapper SSffmpegVideoOperation. <br/>
 The app is written entirely in Kotlin and has a material design feel to it. with lots of colorful elements and icons.
 
 <br/>

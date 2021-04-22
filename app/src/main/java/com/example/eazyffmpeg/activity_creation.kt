@@ -23,7 +23,7 @@ class activity_creation : AppCompatActivity() {
     var height: Int? = 0
     var width: Int? = 0
 
-    var actionToPerform: String = getString(R.string.placeholderString)
+    var actionToPerform: String = "none"
     //action to perform
     // 1 --> video from image
     // 2 --> video from videos

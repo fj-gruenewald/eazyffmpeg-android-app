@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">EazyFFMPEG</string>
+    <string name="title_activity_creation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    //-----Codebehind Strings-----
+
+    //General
+    <string name="emptyVideoSelection">No video selected</string>
+    <string name="emptyImageSelection">No image selected</string>
+    <string name="emptyVideoMedia">No Video in Media List</string>
+    <string name="emptyImageMedia">No Image in Media List</string>
+    <string name="ffmpegProcessSuccessfull">finished successfully</string>
+    <string name="placeholderString">none</string>
+
+    //Video Creation
+    <string name="emptyTimestamp">00:00:00</string>
+    <string name="emptyMaxTimeString">couldnt get video duration</string>
+    <string name="emptyStartTimeString">start time Field is empty</string>
+    <string name="emptyEndTimeString">end time Field is empty</string>
+    <string name="differingTime">start and end time dont match</string>
+    <string name="actionWithoutVideo">chosen action does not contain videos</string>
+    <string name="actionWithoutImage">chosen action does not contain images</string>
+    <string name="creationMethodError">error choosing creation method</string>
+
+    //Text and Title
+    <string name="emptyInputText">no input text was set</string>
+    <string name="emptyXPosition">no x position was set</string>
+    <string name="emptyYPosition">np y position was set</string>
+    <string name="xPositionNotValid">x position value is too high (max 100%)</string>
+    <string name="yPositionNotValid">y position value is too high (max 100%)</string>
+    <string name="standardFont">ShortBaby.ttf</string>
+    <string name="colorWhite">white</string>
+    <string name="colorBlack">black</string>
+    <string name="colorBlue">blue</string>
+    <string name="colorRed">red</string>
+    <string name="colorYellow">yellow</string>
+    <string name="colorGreen">green</string>
+
+
+    //-----UI Strings-----
+    //General
+    <string name="generalInputVideo">Input Video File*s</string>
+    <string name="generalInputImage">Input Image File*s</string>
+    <string name="generalInputFile">Input File</string>
+    <string name="generalInformation">Process Info</string>
+    <string name="generalInform">Information</string>
+
+    //Main
+    <string name="mainActivityHeadline">EazyFFMPEG</string>
+    <string name="mainActivityDescriptor">cut, create, compress, transform...</string>
+    <string name="menuItemVideoCreation">Video Creation</string>
+    <string name="menuItemVideoCutting">Video Cutting</string>
+    <string name="menuItemVideoCompress">Compress</string>
+    <string name="menuItemVideoText">Text &amp;  Title</string>
+    <string name="menuItemVideoEffects">Effects</string>
+    <string name="menuItemVideoTransform">Crop &amp; Flip"</string>
+
+    //Video Creation
+    <string name="videoCreationCreationSpinner">Choose Creation Method</string>
+    <string name="videoCreationApplyButton">Create Video</string>
+
+    //Video Cutting
+    <string name="videoCuttingApplyButton">Trim Video</string>
+
+    //Compression
+    <string name="videoCompressApplyButton">Compress Video</string>
+
+    //Text and Title
+    <string name="videoTextColor">Color</string>
+    <string name="videoTextSize">Font Size</string>
+    <string name="videoText">Text</string>
+    <string name="videoTextPosition">Location in % per axis:</string>
+    <string name="videoTextApplyButton">Add text</string>
+
+    //Effects
+    <string name="videoEffectsChooseEffect">Choose Effect</string>
+    <string name="videoEffectsApplyButton">Add Effect to Video</string>
+
+    //Transform
+    <string name="videoTransformChooseTransformation">Choose Transformation:</string>
+    <string name="videoTransformApplyButton">Transform Video</string>
+
+    //-----String Arrays for Spinners-----
+    //Selected item for the Codec Spinner
+    <string name="selected_item">Selected item:</string>
+
+    //String Array for Effects
+    <string-array name="effects">
+        <item>fade-in-fade-out</item>
+        <item>slow-motion</item>
+        <item>fast-motion</item>
+        <item>reverse</item>
+    </string-array>
+
+    //String Array for Creation Methods
+    <string-array name="creation_Methods">
+        <item>video from image</item>
+        <item>video from videos</item>
+        <item>video from multiple images</item>
+        <item>video from video and image</item>
+    </string-array>
+
+    //String Array for text color
+    <string-array name="text_color">
+        <item>White</item>
+        <item>Black</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+    </string-array>
+
+    //String Array for text size
+    <string-array name="text_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    //String Array for text size
+    <string-array name="transformations">
+        <item>Rotaten 90°</item>
+        <item>Rotate 180°</item>
+        <item>Rotate 270°</item>
+        <item>Vertical Flip</item>
+        <item>Aspect Ratio 16:9</item>
+        <item>Aspect Ratio 4:3</item>
+    </string-array>
+</resources>
