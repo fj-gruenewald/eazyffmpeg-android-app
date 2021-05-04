@@ -1,6 +1,7 @@
 package com.example.eazyffmpeg
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -8,9 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
-
-    //Variables
-    var isLightTheme: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,16 +19,19 @@ class MainActivity : AppCompatActivity() {
 
         //Change theme on click
         btnDayNight.setOnClickListener(){
-            when(isLightTheme)
+
+            val currentNightMode = (resources.configuration.uiMode
+                    and Configuration.UI_MODE_NIGHT_MASK)
+
+            when(currentNightMode)
             {
-                true ->{
-                    isLightTheme = false
-                    btnDayNight.setBackgroundResource(R.drawable.ic_sun)
+                Configuration.UI_MODE_NIGHT_NO ->{
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 }
-                false ->{
-                    isLightTheme = true
-                    btnDayNight.setBackgroundResource(R.drawable.ic_moon)
+                Configuration.UI_MODE_NIGHT_YES ->{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
+                Configuration.UI_MODE_NIGHT_UNDEFINED -> {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 }
             }

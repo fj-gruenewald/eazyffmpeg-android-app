@@ -53,10 +53,11 @@
 
     <!-- DayNight Switch -->
     <ImageView
+        style="@style/themeSwitchStyle"
         android:id="@+id/btnDayNight"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:background="@drawable/ic_moon"/>
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:background="@color/menuBackground"
