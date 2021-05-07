@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainBackground">
+    android:background="@color/mainBackground"
+    android:id="@+id/main">
 
     <TextView
         android:id="@+id/textView"
@@ -38,6 +39,7 @@
 
     <!-- Main Image -->
     <ImageView
+        android:id="@+id/mainImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -101,6 +103,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/videoCreationIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -110,6 +113,7 @@
                         android:src="@drawable/ic_menu_video" />
 
                     <TextView
+                        android:id="@+id/videoCreationText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -139,6 +143,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/videoCuttingIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -148,6 +153,7 @@
                         android:src="@drawable/ic_menu_cut" />
 
                     <TextView
+                        android:id="@+id/videoCuttingText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -166,7 +172,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/videoConvert"
+                    android:id="@+id/videoCompress"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="10dp"
@@ -177,6 +183,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/videoCompressIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -186,6 +193,7 @@
                         android:src="@drawable/ic_menu_convert" />
 
                     <TextView
+                        android:id="@+id/videoCompressText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -227,6 +235,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/videoTextAndTitleIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -236,6 +245,7 @@
                         android:src="@drawable/ic_menu_text" />
 
                     <TextView
+                        android:id="@+id/videoTextAndTitleText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -254,17 +264,18 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/sound"
+                    android:id="@+id/videoEffects"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/menuitem_red"
                     android:clickable="true"
-                    android:onClick="soundClick"
+                    android:onClick="videoSoundClick"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/videoEffectsIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -274,6 +285,7 @@
                         android:src="@drawable/ic_menu_effects" />
 
                     <TextView
+                        android:id="@+id/videoEffectsText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -292,17 +304,18 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/settings"
+                    android:id="@+id/videoCropping"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/menuitem_light_green"
                     android:clickable="true"
-                    android:onClick="settingsClick"
+                    android:onClick="videoCroppingClick"
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/videoCroppingIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
@@ -312,6 +325,7 @@
                         android:src="@drawable/ic_menu_transform" />
 
                     <TextView
+                        android:id="@+id/videoCroppingText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"

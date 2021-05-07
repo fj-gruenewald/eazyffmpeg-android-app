@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_compress">
+    tools:context=".activity_compress"
+    android:id="@+id/compress">
 
     <!-- Main Layout -->
     <LinearLayout
@@ -105,7 +106,10 @@
                         android:id="@+id/txtFilePath"
                         android:layout_width="250dp"
                         android:layout_height="50dp"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"/>
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/btnFileDialog"

@@ -59,12 +59,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun soundClick(view: View) {
+    fun videoSoundClick(view: View) {
         val intent = Intent(this, activity_effects::class.java)
         startActivity(intent)
     }
 
-    fun settingsClick(view: View) {
+    fun videoCroppingClick(view: View) {
         val intent = Intent(this, activity_transform::class.java)
         startActivity(intent)
     }

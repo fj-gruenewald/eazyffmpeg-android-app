@@ -59,39 +59,9 @@ class activity_text : AppCompatActivity() {
 
         //Do the Text Add process
         btnAddTextToVideo.setOnClickListener {
-            when {
-                !isInputVideoSelected -> {
-                    Toast.makeText(
-                        this,
-                        getString(R.string.emptyVideoSelection),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                TextUtils.isEmpty(txtInputText.text.toString()) -> {
-                    Toast.makeText(this, getString(R.string.emptyInputText), Toast.LENGTH_SHORT)
-                        .show()
-                }
-                TextUtils.isEmpty(txtXInput.text.toString()) -> {
-                    Toast.makeText(this, getString(R.string.emptyXPosition), Toast.LENGTH_SHORT)
-                        .show()
-                }
-                txtXInput.text.toString().toFloat() > 100 || txtXInput.text.toString()
-                    .toFloat() <= 0 -> {
-                    Toast.makeText(this, getString(R.string.xPositionNotValid), Toast.LENGTH_SHORT)
-                        .show()
-                }
-                TextUtils.isEmpty(txtYInput.text.toString()) -> {
-                    Toast.makeText(this, getString(R.string.emptyYPosition), Toast.LENGTH_SHORT)
-                        .show()
-                }
-                txtYInput.text.toString().toFloat() > 100 || txtYInput.text.toString()
-                    .toFloat() <= 0 -> {
-                    Toast.makeText(this, getString(R.string.yPositionNotValid), Toast.LENGTH_SHORT)
-                        .show()
-                }
-                else -> {
-                    FFMPEG_AddTextToVideo()
-                }
+            if (activityTextValidation(txtInputText.text.toString(),txtXInput.text.toString(),txtYInput.text.toString()))
+            {
+                FFMPEG_AddTextToVideo()
             }
         }
 
@@ -134,13 +104,7 @@ class activity_text : AppCompatActivity() {
                     parent: AdapterView<*>,
                     view: View, position: Int, id: Long
                 ) {
-                    Toast.makeText(
-                        this@activity_text,
-                        getString(R.string.selected_item) + " " +
-                                "" + text_size[position], Toast.LENGTH_SHORT
-                    ).show()
                 }
-
                 override fun onNothingSelected(parent: AdapterView<*>) {
                 }
             }
@@ -281,6 +245,51 @@ class activity_text : AppCompatActivity() {
             val txtFilePath = findViewById<TextView>(R.id.txtFilePath)
             if (mediaFiles != null && (mediaFiles as ArrayList<MediaFile>).isNotEmpty()) {
                 txtFilePath.text = (mediaFiles as ArrayList<MediaFile>)[0].path.toString()
+            }
+        }
+    }
+
+    //validation for the activity inputs
+    fun activityTextValidation(txtInput:String, xInput:String, yInput:String ): Boolean
+    {
+        when {
+            !isInputVideoSelected -> {
+                Toast.makeText(
+                    this,
+                    getString(R.string.emptyVideoSelection),
+                    Toast.LENGTH_SHORT
+                ).show()
+                return false
+            }
+            TextUtils.isEmpty(txtInput) -> {
+                Toast.makeText(this, getString(R.string.emptyInputText), Toast.LENGTH_SHORT)
+                    .show()
+                return false
+            }
+            TextUtils.isEmpty(xInput) -> {
+                Toast.makeText(this, getString(R.string.emptyXPosition), Toast.LENGTH_SHORT)
+                    .show()
+                return false
+            }
+            xInput.toFloat() > 100 || xInput
+                .toFloat() <= 0 -> {
+                Toast.makeText(this, getString(R.string.xPositionNotValid), Toast.LENGTH_SHORT)
+                    .show()
+                return false
+            }
+            TextUtils.isEmpty(yInput) -> {
+                Toast.makeText(this, getString(R.string.emptyYPosition), Toast.LENGTH_SHORT)
+                    .show()
+                return false
+            }
+            yInput.toFloat() > 100 || yInput
+                .toFloat() <= 0 -> {
+                Toast.makeText(this, getString(R.string.yPositionNotValid), Toast.LENGTH_SHORT)
+                    .show()
+                return false
+            }
+            else -> {
+                return true
             }
         }
     }
