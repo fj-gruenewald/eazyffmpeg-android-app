@@ -32,7 +32,7 @@ Allows you to add effects such as fade-in-fade-out, reverse playback, slow-motio
 
 ## Installation and Usage
 
-The [User Manual](https://github.com/fj-gruenewald/eazyffmpeg-android-app/wiki/User-Manual) has detailed Information on how to use the Application.
+The [User Manual EN](https://github.com/fj-gruenewald/eazyffmpeg-android-app/wiki/User-Manual-EN) has detailed Information on how to use the Application.
 
 <br/>
 
