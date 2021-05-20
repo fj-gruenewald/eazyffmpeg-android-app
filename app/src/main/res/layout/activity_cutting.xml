@@ -33,6 +33,7 @@
                 android:background="@drawable/menuitem_green">
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/headerIcon"
                     android:layout_width="30dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
@@ -40,6 +41,7 @@
                     android:src="@drawable/ic_menu_cut" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/headerText"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
@@ -78,6 +80,7 @@
 
                     <!-- Card 1 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/inputIcon"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
@@ -86,6 +89,7 @@
 
                     <!-- Card 1 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/inputText"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
@@ -145,6 +149,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/displayFrom"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -193,6 +198,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/displayTo"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -246,6 +252,7 @@
 
                     <!-- Card 4 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/processIcon"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
@@ -254,6 +261,7 @@
 
                     <!-- Card 4 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/processText"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"

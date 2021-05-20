@@ -34,6 +34,7 @@
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/headerIcon"
                     android:layout_width="30dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
@@ -41,6 +42,7 @@
                     android:src="@drawable/ic_menu_convert" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/headerText"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
@@ -79,6 +81,7 @@
 
                     <!-- Card 1 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/inputIcon"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
@@ -87,6 +90,7 @@
 
                     <!-- Card 1 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/inputText"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
@@ -107,6 +111,7 @@
                         android:layout_width="250dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
+                        android:textSize="10dp"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"/>
@@ -151,6 +156,7 @@
 
                     <!-- Card 2 Header Icon -->
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/processIcon"
                         android:layout_width="30dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"
@@ -159,6 +165,7 @@
 
                     <!-- Card 2 Header Text -->
                     <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/processText"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginLeft="10dp"

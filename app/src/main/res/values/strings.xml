@@ -98,9 +98,7 @@
     //String Array for Creation Methods
     <string-array name="creation_Methods">
         <item>video from image</item>
-        <item>video from videos</item>
         <item>video from multiple images</item>
-        <item>video from video and image</item>
     </string-array>
 
     //String Array for text color
@@ -122,9 +120,6 @@
 
     //String Array for text size
     <string-array name="transformations">
-        <item>Rotaten 90°</item>
-        <item>Rotate 180°</item>
-        <item>Rotate 270°</item>
         <item>Vertical Flip</item>
         <item>Aspect Ratio 16:9</item>
         <item>Aspect Ratio 4:3</item>
