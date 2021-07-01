@@ -52,58 +52,58 @@ class activity_compress : AppCompatActivity() {
     }
 
     //Get the Width and Height of the Video
-    @SuppressLint("NewApi")
-    fun selectedFiles(mediaFiles: List<MediaFile>?, requestCode: Int) {
-        val txtFilePath = findViewById<TextView>(R.id.txtFilePath)
-        when (requestCode) {
-            Common.VIDEO_FILE_REQUEST_CODE -> {
-                if (mediaFiles != null && mediaFiles.isNotEmpty()) {
-                    isInputVideoSelected = true
-                    CompletableFuture.runAsync {
-                        retriever = MediaMetadataRetriever()
-                        retriever?.setDataSource(txtFilePath.text.toString())
-                        val bit = retriever?.frameAtTime
-                        width = bit?.width
-                        height = bit?.height
+    @SuppressLint("NewApi")                                              // tell if something is wrong with Lint
+    fun selectedFiles(mediaFiles: List<MediaFile>?, requestCode: Int) {         //
+        val txtFilePath = findViewById<TextView>(R.id.txtFilePath)              //
+        when (requestCode) {                                                    //
+            Common.VIDEO_FILE_REQUEST_CODE -> {                                 //
+                if (mediaFiles != null && mediaFiles.isNotEmpty()) {            //
+                    isInputVideoSelected = true                                 //
+                    CompletableFuture.runAsync {                                //
+                        retriever = MediaMetadataRetriever()                    //
+                        retriever?.setDataSource(txtFilePath.text.toString())   //
+                        val bit = retriever?.frameAtTime                        //
+                        width = bit?.width                                      //
+                        height = bit?.height                                    //
                     }
-                } else {
-                    Toast.makeText(
-                        this,
-                        getString(R.string.emptyVideoSelection),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                } else {                                                        //
+                    Toast.makeText(                                             //
+                        this,                                           //
+                        getString(R.string.emptyVideoSelection),                                    //
+                        Toast.LENGTH_SHORT                                      //
+                    ).show()                                                    //
                 }
             }
         }
     }
 
     //The FFMPEG Process
-    private fun compressProcess() {
+    private fun compressProcess() {                                                                 // Methode zum Komprimieren
 
-        val txtInfo = findViewById<TextView>(R.id.txtInfo)
-        val txtFilePath = findViewById<TextView>(R.id.txtFilePath)
-        val outputPath = Common.getFilePath(this, Common.VIDEO)
+        val txtInfo = findViewById<TextView>(R.id.txtInfo)                                          // initialisiere: Info Text Field
+        val txtFilePath = findViewById<TextView>(R.id.txtFilePath)                                  // initialisiere: Path Text Field
+        val outputPath = Common.getFilePath(this, Common.VIDEO)                             // initialisiere: Output Field
 
-        val query =
-            FFmpegQueryExtension.compressor(txtFilePath.text.toString(), width, height, outputPath)
-        CallBackOfQuery.callQuery(this, query, object : FFmpegCallBack {
-            override fun process(logMessage: LogMessage) {
-                txtInfo.text = logMessage.text
+        val query =                                                                                 // FFmpeg Query
+            FFmpegQueryExtension.compressor(txtFilePath.text.toString(), width, height, outputPath) // FFmpegQueryExtension der Library .ZuAusführenderProzess
+        CallBackOfQuery.callQuery(this, query, object : FFmpegCallBack {                    // Callback für Info Text
+            override fun process(logMessage: LogMessage) {                                          // Prozess überschreiben für Info Text
+                txtInfo.text = logMessage.text                                                      // Text Feld das upgedated werden soll
             }
 
-            @SuppressLint("SetTextI18n")
-            override fun success() {
-                txtInfo.text = String.format(
-                    getString(R.string.ffmpegProcessSuccessfull), outputPath, Common.getFileSize(
-                        File(outputPath)
+            @SuppressLint("SetTextI18n")                                                     // Lokalisierung unterdrücken (eng text)
+            override fun success() {                                                                // überschreibe success function von ffmpeg
+                txtInfo.text = String.format(                                                       // Text Feld mit erfolgstext füllen
+                    getString(R.string.ffmpegProcessSuccessfull), outputPath, Common.getFileSize(                        // text aus strings.xml + ausgabe + größe
+                        File(outputPath)                                                            // es soll nur der text angezeigt werden
                     )
                 )
             }
 
-            override fun cancel() {
+            override fun cancel() {                                                                 // Cancle wird überschrieben und es soll nichts passieren
             }
 
-            override fun failed() {
+            override fun failed() {                                                                 // Failed wird überschrieben, hier soll später ein errorcode hin
             }
         })
     }
